@@ -1,0 +1,11 @@
+<form action="/sessions/create" method="post"> 
+	<p>Email: <input type="email" name="Email"></p>
+	<p>Password: <input type="password" name="Password"></p>
+	<input type="submit" value="Log In">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+</form>
+
+<%= flash[:error] %>
+
+<br>
+Or <a href="/users/new">Sign Up</a>

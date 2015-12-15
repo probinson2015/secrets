@@ -1,0 +1,17 @@
+<%= flash[:errors] %>
+
+<form action="/users/<%=@user.id%>" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input type="hidden"name="_method" value="patch">
+	<p>Name: <input type="text" value="<%=@user.name%>" name="Name"></p>
+	<p>Email: <input type="text" value="<%=@user.email%>" name="Email"></p>
+	<p>Password: <input type="password" name="Password"></p>
+	<p>Confirm Password: <input type="password" name="Confirm Password"></p>
+	<input type="submit" value="Update">
+</form>
+
+<form action="/users/<%=@user.id%>" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<input type="hidden"name="_method" value="delete">
+	<input type="submit" value="Delete Account">
+</form>

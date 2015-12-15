@@ -1,0 +1,18 @@
+
+	<div class="col-md-5">
+		<h3> Sign Up</h3>
+		<% flash[:errors] %>
+			
+
+
+		<form class ="form-group" action="/users" method="post">
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<p>Name: <input class="form-control" type="text" name="Name"></p>
+			<p>Email Address: <input class="form-control" type="text" name="Email"></p>
+			<p>Password: <input class="form-control" type="password" name="Password"></p>
+			<p>Confirm Password: <input class="form-control" type="password" name="Password Confirmation"></p>
+
+			<p><input type="submit" value="Join"></p>
+		</form>
+		<a href="/sessions/new"><button type="button" class ="btn btn-primary">Cancel</button></a>
+	</div>
