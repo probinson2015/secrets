@@ -15,6 +15,7 @@
 # gem 'pg'
 #
 default: &default
+  username: ubuntu
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
@@ -81,5 +82,5 @@ test:
 production:
   <<: *default
   database: seeks_production
-  username: seeks
+  username: ubuntu
   password: <%= ENV['SEEKS_DATABASE_PASSWORD'] %>
